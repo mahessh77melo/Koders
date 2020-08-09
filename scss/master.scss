@@ -1,0 +1,94 @@
+@import "_variables";
+@import "_animations";
+@import "_utilities";
+
+html{
+  font-size: 10px;
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  box-sizing: border-box;
+}
+*{
+  font-size: inherit;
+  box-sizing: inherit;
+}
+::selection{
+  background-color: $color-1;
+}
+body {
+  background-image: linear-gradient(105deg,rgba($color-1,0.85) 0%,rgba($color-4,0.85) 50%,rgba($almost-white,0.5) 50%), url("../img/koder-1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:100vh;
+  position: relative;
+}
+.title-box{
+  position: relative;
+  &__logo{
+    opacity: 0.8;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0.3) translate(-50%,-50%);
+    border-radius: 50%;
+    box-shadow: 0 3rem 6rem rgba($black-col,0.7);
+  }
+}
+.heading-super {
+  display: inline-block;
+  animation: jump .8s ;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 10rem;
+  position:relative;
+  color:$almost-white;
+  letter-spacing: .8rem;
+  width: 50%;
+  .letter {
+    padding:0 2.8rem;
+    position:absolute;
+    display:inline-block;
+    transform:translateX(-75%);
+    &-k{
+      transform:translateX(-130%);
+    }
+    &-i{
+      transform:translateX(-85%);
+      animation:anim-i .7s ease-out 1s;
+      animation-fill-mode:forwards;
+    }
+    &-o{
+      opacity:0;
+      animation: anim-o .5s ease-out .8s;
+      animation-fill-mode:forwards;
+    }
+  }
+  &:hover .letter{
+    animation: jump .8s ;
+  }
+}
+.title-slogan{
+  color:$almost-white;
+  font-size:2rem;
+  margin-top: 2rem;
+  text-align: center;
+  width:50%;
+  transform:translateX(-10%);
+}
+.title-list{
+  color: $almost-white;
+  width: 50%;
+
+  transform: translateX(30%);
+  &__group{
+    list-style: circle;
+  }
+  &__item{
+    font-size: 1.6rem;
+  }
+}
+.section-form{
+  top:-100%;
+  right:0;
+  z-index: 1;
+}
