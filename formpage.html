@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon_new.ico">
+    <title>Log In | Sign Up</title>
+  </head>
+  <body>
+    <div class="formpage_body">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <h2 class="card__heading">Login to Continue</h2>
+          <form class="form-group form-group--login" method="post">
+            <input type="email" class="input__group" name="mailid" id="email" placeholder="Your email" value="">
+            <input type="text" class="input__group" name="username" placeholder="Your disguise name" value="">
+            <input type="password" class="input__group" name="password" placeholder="A password as strong as yourself" value="">
+            <div class="form-group__buttons">
+              <input type="submit" class="btn btn-sub" name="submit" value="Login">
+              <input type="reset" name="rest" class="btn btn-reset" value="Cancel">
+            </div>
+          </form>
+          <button onclick="myFunc()" class="btn btn-turn">Already have an account <span>&rarr;</span> </button>
+        </div>
+        <div class="card__side card__side--back">
+          <h2 class="card__heading">SignUp to start Koding</h2>
+          <form class="form-group form-group--signup" method="post">
+            <input type="text" class="input__group" name="username" placeholder="User Name" value="">
+            <input type="password" class="input__group" name="password" placeholder="password" value="">
+            <div class="form-group__buttons">
+              <input type="submit" class="btn btn-sub" name="submit" value="Sign Up">
+              <input type="reset" name="rest" class="btn btn-reset" value="Cancel">
+            </div>
+          </form>
+        <button onclick="myFunc1()" class="btn btn-turn-back">Don't have an account? Creat One <span>&rarr;</span></button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function myFunc() {
+
+      document.querySelector(".card__side--front").style.transform = "rotateY(-180deg)";
+      document.querySelector(".card__side--back").style.transform = "rotateY(0)";
+
+      }
+      function myFunc1(){
+        document.querySelector(".card__side--front").style.transform = "rotateY(0)";
+        document.querySelector(".card__side--back").style.transform = "rotateY(180deg)";
+      }
+    </script>
+
+  </body>
+</html>

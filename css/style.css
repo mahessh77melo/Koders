@@ -47,25 +47,129 @@
 .mr-auto {
   margin-left: auto; }
 
-html {
-  font-size: 10px;
-  margin: 0;
-  font-family: "Sora", sans-serif;
-  box-sizing: border-box; }
-
-* {
-  font-size: inherit;
-  box-sizing: inherit; }
-
-::selection {
-  background-color: #7400B8; }
-
-body {
-  background-image: linear-gradient(105deg, rgba(116, 0, 184, 0.85) 0%, rgba(83, 144, 217, 0.85) 50%, rgba(254, 250, 224, 0.5) 50%), url("../img/koder-1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+.formpage_body {
+  background-image: linear-gradient(to right bottom, rgba(116, 0, 184, 0.65), rgba(114, 239, 221, 0.8)), url("../img/koder-login-bg.jpg");
+  min-width: 100vw;
   min-height: 100vh;
-  position: relative; }
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+.card {
+  font-family: 'Sora',sans-serif;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 60rem;
+  width: 45%; }
+  .card__heading {
+    font-size: 3rem;
+    color: #fefae0;
+    letter-spacing: 1.5px;
+    text-align: center; }
+  .card__side {
+    height: 60rem;
+    transition: all 1s cubic-bezier(0.17, 0.67, 0.69, 1.38);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden; }
+    .card__side--front {
+      background-image: linear-gradient(to left top, #7400B8, #5390D9);
+      box-shadow: 0 2rem 3rem rgba(116, 0, 184, 0.8); }
+    .card__side--back {
+      transform: rotateY(180deg);
+      background-image: linear-gradient(to right bottom, #7400B8, #5E60CE);
+      box-shadow: 0 2rem 3rem rgba(105, 48, 195, 0.8); }
+  .card .btn-turn:active .card__side--front {
+    transform: rotateY(-180deg); }
+  .card .btn-turn:active .card__side--back {
+    transform: rotateY(0); }
+  .card .btn-turn-back:active .card__side--front {
+    transform: rotateY(0deg); }
+  .card .btn-turn-back:active .card__side--back {
+    transform: rotateY(180deg); }
+
+.btn {
+  background-color: #fefae0;
+  color: #6930C3;
+  padding: 2rem 3rem;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+  transition: all .2s ease-out;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1.4rem; }
+  .btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.7); }
+  .btn:focus {
+    outline: none; }
+  .btn-turn {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px; }
+  .btn-turn-back {
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 2px; }
+  .btn-reset {
+    font-weight: 500;
+    color: orangered;
+    background-color: #fefae0; }
+  .btn-sub {
+    font-weight: 500;
+    color: green;
+    background-color: #fefae0; }
+  .btn:hover span {
+    transform: translateX(1rem); }
+
+.input__group {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rbga(#fff, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 66.66%;
+  display: block;
+  transition: all .3s;
+  margin-bottom: 3rem; }
+  .input__group:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #7400B8; }
+  .input__group:focus:invalid {
+    border-bottom: 3px solid orangered; }
+  .input__group::-webkit-input-placeholder {
+    color: #555; }
+
+.form-group {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+  .form-group__buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: auto;
+    font-size: 1.6rem;
+    font-family: 'Sora',sans-serif; }
+  .form-group input {
+    font-family: 'Sora',sans-serif; }
 
 .title-box {
   position: relative; }
@@ -140,3 +244,28 @@ body {
     transform: scale(0.3) translate(-75%, -75%);
     border-radius: 50%;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4); }
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  box-sizing: border-box; }
+
+* {
+  font-size: inherit;
+  box-sizing: inherit; }
+
+::selection {
+  background-color: #7400B8; }
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative; }
+
+.lander_body {
+  background-image: linear-gradient(105deg, rgba(116, 0, 184, 0.85) 0%, rgba(83, 144, 217, 0.85) 50%, rgba(254, 250, 224, 0.5) 50%), url("../img/koder-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
