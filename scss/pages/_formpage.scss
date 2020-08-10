@@ -1,19 +1,20 @@
 .formpage_body{
   background-image: linear-gradient(to right bottom, rgba($color-1,0.65),rgba($color-8,0.8)),url("../img/koder-login-bg.jpg");
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .card {
     font-family:'Sora',sans-serif;
     // FUNCTIONALITY
-    perspective: 150rem;
-    -moz-perspective: 150rem;
+    perspective: 200rem;
+    -moz-perspective: 200rem;
     position: relative;
     height: 60rem;
     width:45%;
@@ -32,6 +33,9 @@
         top: 0;
         left: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex:1;
         backface-visibility: hidden;
         border-radius: 20px;
         overflow: hidden;
@@ -48,19 +52,6 @@
 
             }
         }
- .btn-turn:active .card__side--front {
-        transform: rotateY(-180deg);
-    }
-
- .btn-turn:active  .card__side--back {
-        transform: rotateY(0);
-    }
- .btn-turn-back:active .card__side--front{
-       transform: rotateY(0deg);
- }
- .btn-turn-back:active .card__side--back{
-       transform: rotateY(180deg);
- }
 
     }
  .btn{
@@ -83,14 +74,8 @@
    &:focus{
      outline: none;
    }
-   &-turn{
-      float:right;
-      position:absolute;
-      bottom:0;
-      right:0;
-      border-radius: 2px;
-    }
-    &-turn-back{
+   &-turn,
+   &-turn-back{
       float:right;
       position:absolute;
       bottom:0;
@@ -139,7 +124,8 @@
     }
 
     &::-webkit-input-placeholder {
-        color: #555;
+        color: #888;
+        font-weight: 500;
     }
 }
 .form-group{
