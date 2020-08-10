@@ -33,7 +33,7 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        border-radius: 3px;
+        border-radius: 20px;
         overflow: hidden;
 
         &--front {
@@ -126,11 +126,12 @@
     display: block;
     transition: all .3s;
     margin-bottom: 3rem;
+    border-bottom: 5px solid transparent;
 
     &:focus {
         outline: none;
         box-shadow: 0 1rem 2rem rgba($black-col, .1);
-        border-bottom: 3px solid $color-1;
+        border-bottom: 5px solid $color-6;
     }
 
     &:focus:invalid {
@@ -152,6 +153,10 @@
     align-self: auto;
     font-size: 1.6rem;
     font-family: 'Sora',sans-serif;
+    .btn{
+      cursor: pointer;
+      position: relative;
+    }
   }
   input{
     font-family: 'Sora',sans-serif;

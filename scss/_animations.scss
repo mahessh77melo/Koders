@@ -1,6 +1,6 @@
 @keyframes anim-o {
   0%{
-    opacity:1;
+    opacity:.5;
     transform : translateX(-75%) translateY(40%);
   }
   50%{
@@ -25,18 +25,18 @@
     transform:translateX(-100%) translateY(-80%) rotate(720deg) skewY(10deg);
   }
 }
-@keyframes jump{
+@keyframes jump-k{
   0%{
     opacity: 1;
   }
   33%{
-    transform: translateY(-1rem) rotate(-30deg);
+    transform: translateX(-130%) translateY(-2rem) rotate(-30deg);
   }
   60%{
-    transform: translateY(-2rem) rotate(30deg);
+    transform: translateX(-130%) translateY(-4rem) rotate(30deg);
   }
   100%{
-    transform: translateY(0rem) rotate(0deg);
+    transform: translateX(-130%) translateY(0rem) rotate(0deg);
   }
 
 }

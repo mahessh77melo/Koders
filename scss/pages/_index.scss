@@ -30,8 +30,8 @@
       animation-fill-mode:forwards;
     }
   }
-  &:hover .letter{
-    animation: jump .8s ;
+  &:hover .letter-k{
+    animation:jump-k .5s ease-out;
   }
 }
 .title-slogan{
