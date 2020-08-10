@@ -109,11 +109,13 @@
   .btn:focus {
     outline: none; }
   .btn-turn, .btn-turn-back {
-    float: right;
+    display: flex;
+    flex-direction: row;
     position: absolute;
     bottom: 0;
     right: 0;
-    border-radius: 2px; }
+    border-radius: 2px;
+    padding-right: 5rem; }
   .btn-reset {
     font-weight: 500;
     color: orangered;
@@ -122,8 +124,13 @@
     font-weight: 500;
     color: green;
     background-color: #fefae0; }
-  .btn:hover span {
-    transform: translateX(1rem); }
+  .btn > span {
+    transition: all .3s ease-out;
+    position: absolute;
+    right: 3rem; }
+  .btn:hover > span {
+    position: absolute;
+    transform: translateX(2rem); }
 
 .input__group {
   font-size: 1.5rem;

@@ -76,11 +76,13 @@
    }
    &-turn,
    &-turn-back{
-      float:right;
+     display: flex;
+     flex-direction: row;
       position:absolute;
       bottom:0;
       right:0;
       border-radius: 2px;
+      padding-right: 5rem;
     }
     &-reset{
       font-weight: 500;
@@ -92,8 +94,14 @@
       color: green;
       background-color: $almost-white;
     }
-    &:hover span{
-      transform: translateX(1rem);
+    &>span{
+      transition: all .3s ease-out;
+      position: absolute;
+      right:3rem;
+    }
+    &:hover>span{
+      position: absolute;
+      transform: translateX(2rem);
     }
 
   }
