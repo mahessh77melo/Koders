@@ -1,6 +1,7 @@
 .formpage_body{
   background-image: linear-gradient(to right bottom, rgba($color-1,0.65),rgba($color-8,0.8)),url("../img/koder-login-bg.jpg");
   width: 100vw;
+  background-blend-mode: lighten;
   min-height: 100vh;
   background-size: cover;
   display: flex;
@@ -13,12 +14,11 @@
 .card {
     font-family:'Sora',sans-serif;
     // FUNCTIONALITY
-    perspective: 200rem;
-    -moz-perspective: 200rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
     position: relative;
     height: 60rem;
     width:45%;
-
     &__heading{
       font-size: 3rem;
       color: $almost-white;
@@ -28,24 +28,27 @@
 
     &__side {
         height: 60rem;
-        transition: all 1s cubic-bezier(.17,.67,.69,1.38);
+        transition: all .6s cubic-bezier(.17,.67,.69,1.38);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         display: flex;
         flex-direction: column;
-        flex:1;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform-style: preserve-3d;
         border-radius: 20px;
         overflow: hidden;
 
         &--front {
+            height: 100%;
             background-image: linear-gradient(to left top, $color-1,$color-4);
             box-shadow: 0 2rem 3rem rgba($color-1, .8);
         }
 
         &--back {
+            height: 100%;
             transform: rotateY(180deg);
             background-image: linear-gradient(to right bottom, $color-1, $color-3);
             box-shadow: 0 2rem 3rem rgba($color-2, .8);
