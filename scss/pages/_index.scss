@@ -1,87 +1,101 @@
-.title-box{
-  position: relative;
+.title-box {
+	position: relative;
 }
-.heading-super {
-  display: inline-block;
-  animation: jump .8s ;
-  text-align: center;
-  margin-top: 10%;
-  font-size: 10rem;
-  position:relative;
-  color:$almost-white;
-  letter-spacing: .8rem;
-  width: 50%;
-  .letter {
-    padding:0 2.8rem;
-    position:absolute;
-    display:inline-block;
-    transform:translateX(-75%);
-    &-k{
-      transform:translateX(-130%);
-    }
-    &-i{
-      transform:translateX(-85%);
-      animation:anim-i .7s ease-out 1s;
-      animation-fill-mode:forwards;
-    }
-    &-o{
-      opacity:0;
-      animation: anim-o .5s ease-out .8s;
-      animation-fill-mode:forwards;
-    }
-  }
-  &:hover .letter-k{
-    animation:jump-k .5s ease-out;
-  }
+.lander_body {
+	background-image: linear-gradient(
+			105deg,
+			rgba($color-1, 0.85) 0%,
+			rgba($color-4, 0.85) 50%,
+			rgba($black-col, 0.5) 50%
+		),
+		url("../img/koder-1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: hard-light;
+	min-height: 100vh;
 }
-.title-slogan{
-  color:$almost-white;
-  font-size:2rem;
-  margin-top: 2rem;
-  text-align: center;
-  width:50%;
-  transform:translateX(-10%);
-}
-.title-list{
-  color: $almost-white;
-  width: 50%;
 
-  transform: translateX(30%);
-  &__group{
-    list-style: circle;
-  }
-  &__item{
-    font-size: 1.6rem;
-  }
+.heading-super {
+	display: inline-block;
+	animation: jump 0.8s;
+	text-align: center;
+	margin-top: 10%;
+	font-size: 10rem;
+	position: relative;
+	color: $almost-white;
+	letter-spacing: 0.8rem;
+	width: 50%;
+	.letter {
+		padding: 0 2.8rem;
+		position: absolute;
+		display: inline-block;
+		transform: translateX(-75%);
+		&-k {
+			transform: translateX(-130%);
+		}
+		&-i {
+			transform: translateX(-85%);
+			animation: anim-i 0.7s ease-out 1s;
+			animation-fill-mode: forwards;
+		}
+		&-o {
+			opacity: 0;
+			animation: anim-o 0.5s ease-out 0.8s;
+			animation-fill-mode: forwards;
+		}
+	}
+	&:hover .letter-k {
+		animation: jump-k 0.5s ease-out;
+	}
 }
-.section-form{
-  top:-100%;
-  right:0;
-  z-index: 1;
+.title-slogan {
+	color: $almost-white;
+	font-size: 2rem;
+	margin-top: 2rem;
+	text-align: center;
+	width: 50%;
+	transform: translateX(-10%);
 }
-.navbar{
-  width:100%;
-  font-size:2rem;
-  display: flex;
-  justify-content: space-between;
-  &__list{
-    list-style: none;
-    display: flex;
-  }
-  &__item{
-    padding: 0 2rem;
-  }
-  &__link{
-    color:$almost-white;
-    text-decoration: none;
-  }
-  &__logo{
-    opacity: 0.8;
-    position: absolute;
-    top:0;
-    left: 0;
-    transform: scale(0.3) translate(-75%,-75%);
-    border-radius: 50%;
-    box-shadow: 0 3rem 6rem rgba($black-col,0.4);
-  }
+.title-list {
+	color: $almost-white;
+	width: 50%;
+
+	transform: translateX(30%);
+	&__group {
+		list-style: circle;
+	}
+	&__item {
+		font-size: 1.6rem;
+	}
+}
+.section-form {
+	top: -100%;
+	right: 0;
+	z-index: 1;
+}
+.navbar {
+	width: 100%;
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-between;
+	&__list {
+		list-style: none;
+		display: flex;
+	}
+	&__item {
+		padding: 0 2rem;
+	}
+	&__link {
+		color: $almost-white;
+		text-decoration: none;
+	}
+	&__logo {
+		opacity: 0.8;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: scale(0.3) translate(-75%, -75%);
+		border-radius: 50%;
+		box-shadow: 0 3rem 6rem rgba($black-col, 0.4);
+	}
 }
